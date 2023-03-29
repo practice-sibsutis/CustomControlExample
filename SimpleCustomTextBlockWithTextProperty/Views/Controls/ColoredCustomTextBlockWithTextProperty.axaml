@@ -1,0 +1,24 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:SimpleCustomTextBlockWithTextProperty.Views.Controls">
+  <Design.PreviewWith>
+	  <controls:ColoredCustomTextBlockWithTextProperty
+		  Background="DarkGreen"
+		  Foreground="BurlyWood"
+		  CustomText="Templated Control"/>
+  </Design.PreviewWith>
+
+  <Style Selector="controls|ColoredCustomTextBlockWithTextProperty">
+    <!-- Set Defaults -->
+    <Setter Property="Template">
+      <ControlTemplate>
+		  <Border Background="{TemplateBinding Background}">
+			  <TextBlock Text="{TemplateBinding CustomText}"
+						 FontSize="20"
+						 FontFamily="Consolas"
+						 Foreground="{TemplateBinding Foreground}"/>
+		  </Border>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+</Styles>

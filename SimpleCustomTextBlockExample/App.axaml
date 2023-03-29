@@ -1,0 +1,13 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:SimpleCustomTextBlockExample"
+             x:Class="SimpleCustomTextBlockExample.App">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme Mode="Light"/>
+		<StyleInclude Source="/Views/Controls/CustomTextBlock.axaml"/>
+    </Application.Styles>
+</Application>

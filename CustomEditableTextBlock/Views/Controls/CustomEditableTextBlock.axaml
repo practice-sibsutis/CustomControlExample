@@ -1,0 +1,37 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:CustomEditableTextBlock.Views.Controls">
+	<Design.PreviewWith>
+		<controls:CustomEditableTextBlock
+			Background="BlanchedAlmond"
+			Foreground="Black"
+			CustomText="Custom Editable TextBlock"/>
+	</Design.PreviewWith>
+
+	<Style Selector="controls|CustomEditableTextBlock">
+		<!-- Set Defaults -->
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Panel>
+					<Border Background="{TemplateBinding Background}">
+						<TextBlock Classes="TextClass"
+								   Text="{Binding #customTextBox.Text}"
+								   FontSize="20"
+								   FontFamily="Consolas"
+								   Foreground="{TemplateBinding Foreground}"
+								   Height="35"/>
+					</Border>
+					<Border Name="textBoxBorder"
+							IsVisible="False"
+							Background="{TemplateBinding Background}">
+						<TextBox Name="customTextBox"
+							     Text="{TemplateBinding CustomText}"
+								 FontSize="20"
+								 FontFamily="Consolas"
+								 Foreground="{TemplateBinding Foreground}"/>
+					</Border>
+				</Panel>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+</Styles>
